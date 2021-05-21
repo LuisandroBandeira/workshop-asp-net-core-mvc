@@ -29,5 +29,10 @@ namespace SalesWebMvc.Models
         {
             return Sellers.Sum(seller => seller.totalSales(initial,final));
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
