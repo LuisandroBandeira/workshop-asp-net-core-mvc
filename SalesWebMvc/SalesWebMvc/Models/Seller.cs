@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
 
 namespace SalesWebMvc.Models
 {
@@ -9,6 +10,7 @@ namespace SalesWebMvc.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]//Isso serve para formatar a data de nascimento
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
         public Department Department{ get; set; }
